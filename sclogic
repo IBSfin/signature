@@ -1,0 +1,11 @@
+contract Contract is ERC721Base {
+    // Mapping of token ID to nickname string
+    mapping (uint => string) public nicknames;
+
+    // Set a new nickname for a token
+    function setNickname(uint _tokenId, string calldata _nickname) public {
+        nicknames[_tokenId] = _nickname;
+    }
+
+    // ... constructor
+}
